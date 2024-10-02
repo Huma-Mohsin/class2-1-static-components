@@ -1,101 +1,67 @@
-import Image from "next/image";
+import Heading from "../../components/heading"   //importing component
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+   <span style={{ display: 'flex', alignItems: 'center' }}>
+        <img src="/nextjs.jpeg" alt="Next.js logo" width="80px" height="20px" />
+        <h1 style={{ marginLeft: '10px',fontSize:40}}>
+          <strong>Next.js</strong>
+        </h1>
+      </span>
+      <br />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Heading />       
+      <br />
+
+      <p>
+        Next.js is a React-based framework designed for building server-side
+        rendered (SSR) and static web applications. It offers a variety of
+        features to streamline the development of modern web applications. Some
+        key aspects of Next.js include:
+        <br />
+        <br/>
+        <strong>1. Server-Side Rendering (SSR):</strong>
+        Renders pages on the server before sending them to the browser,
+        improving SEO and performance, especially for content-heavy or
+        dynamically updated pages.
+        <br />
+        <strong>2. Static Site Generation (SSG):</strong>
+        Allows pre-rendering of pages at build time, which can be ideal for
+        performance, especially when the content doesn’t change frequently.
+        <br />
+        <strong>3. File-based Routing:</strong>
+        Routes are created automatically based on the file structure inside the
+        pages folder. For example, a pages/about.js file corresponds to the
+        /about route.
+        <br />
+        4.<strong> API Routes:</strong>
+        You can easily create API endpoints within the pages/api directory,
+        eliminating the need for a separate backend server.
+        <br />
+        5. Incremental Static Regeneration (ISR): Allows you to update static
+        content after the initial build. Pages are re-rendered in the background
+        as new requests come in, enabling static sites to have fresh content
+        without rebuilding the whole site.
+        <br />
+        <strong>6. Hybrid Approach:</strong>
+        Next.js allows you to mix static generation and server-side rendering on
+        a per-page basis. You can decide which pages should be generated
+        statically and which ones should be rendered on the server.
+        <br />
+        <strong>7. Optimized Performance:</strong>
+        Features like automatic code-splitting, image optimization, and lazy
+        loading help improve the overall performance of Next.js applications.
+        <br />
+        <strong>8. TypeScript Support:</strong>
+        It has built-in TypeScript support, making it easy to write type-safe
+        code in Next.js.
+        <br />
+        <strong>9. API Integrations:</strong>
+        Next.js supports GraphQL, REST APIs, and many third-party services out
+        of the box.
+      </p>
+      <br />
     </div>
   );
 }
